@@ -16,9 +16,12 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger()
 
 
+
 def go(args):
+    print("✅ run.py IS RUNNING!")
 
     run = wandb.init(job_type="test_model")
+    print(f"W&B run initialized: {run.name}")
     run.config.update(args)
 
     logger.info("Downloading artifacts")
@@ -51,7 +54,8 @@ def go(args):
 
 
 if __name__ == "__main__":
-
+    print("\n\n\n✅ __main__ called\n\n\n")
+    
     parser = argparse.ArgumentParser(description="Test the provided model against the test dataset")
 
     parser.add_argument(
