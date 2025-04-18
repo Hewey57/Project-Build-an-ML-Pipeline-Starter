@@ -18,7 +18,6 @@ logger = logging.getLogger()
 
 
 def go(args):
-    print("✅ run.py IS RUNNING!")
 
     run = wandb.init(job_type="test_model")
     print(f"W&B run initialized: {run.name}")
@@ -54,7 +53,6 @@ def go(args):
 
 
 if __name__ == "__main__":
-    print("\n\n\n✅ __main__ called\n\n\n")
     
     parser = argparse.ArgumentParser(description="Test the provided model against the test dataset")
 

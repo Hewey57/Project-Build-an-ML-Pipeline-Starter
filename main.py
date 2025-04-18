@@ -129,7 +129,6 @@ def go(config: DictConfig):
             
 
         if "test_regression_model" in active_steps:
-            print("🔥 test_regression_model script is running 🔥")
 
             ##################
             # Implement here #
