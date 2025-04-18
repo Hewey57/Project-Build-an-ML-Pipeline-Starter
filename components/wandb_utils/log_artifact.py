@@ -26,3 +26,4 @@ def log_artifact(artifact_name, artifact_type, artifact_description, filename, w
     # version below. This will wait until the artifact is loaded into W&B and a
     # version is assigned
     artifact.wait()
+    print(f"[DEBUG] Artifact {artifact_name} logged to W&B")
